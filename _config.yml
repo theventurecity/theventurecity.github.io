@@ -1,1 +1,18 @@
-theme: jekyll-theme-cayman
+
+# Site settings
+title: TheVentureCity
+description: > # this means to ignore newlines until "baseurl:"
+  A new venture and growth acceleration model that helps diverse founders achieve global impact
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://theventurecity.github.io" # the base hostname & protocol for your site
+github_username: theventurecity
+# googleAnalyticsKey: "UA-79018683-1"
+theme: minima
+header_pages:
+  - about.md
+
+# Build settings
+markdown: kramdown
+gems:
+  - jekyll-mentions
+  - jekyll-watch
