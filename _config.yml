@@ -10,6 +10,7 @@ github_username: theventurecity
 theme: minima
 header_pages:
   - about.md
+  - gist1.md
 
 # Build settings
 markdown: kramdown

@@ -3,9 +3,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Data Analysis Toolkit for Early-Stage Startups | TheVentureCity</title>
+<title>Data Pipeline Toolkit for Early-Stage Startups | TheVentureCity</title>
 <meta name="generator" content="Jekyll v3.7.4" />
-<meta property="og:title" content="Data Analysis Toolkit for Early-Stage Startups" />
+<meta property="og:title" content="Data Pipeline Toolkit for Early-Stage Startups" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="A new venture and growth acceleration model that helps diverse founders achieve global impact" />
 <meta property="og:description" content="A new venture and growth acceleration model that helps diverse founders achieve global impact" />
@@ -13,12 +13,11 @@
 <meta property="og:url" content="http://localhost:4000/" />
 <meta property="og:site_name" content="TheVentureCity" />
 <script type="application/ld+json">
-{"@type":"WebSite","url":"http://localhost:4000/","name":"TheVentureCity","headline":"Data Analysis Toolkit for Early-Stage Startups","description":"A new venture and growth acceleration model that helps diverse founders achieve global impact","@context":"http://schema.org"}</script>
+{"@type":"WebSite","url":"http://localhost:4000/","name":"TheVentureCity","headline":"Data Pipeline Toolkit for Early-Stage Startups","description":"A new venture and growth acceleration model that helps diverse founders achieve global impact","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="TheVentureCity" /></head>
-<body><header class="site-header" role="banner">
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="TheVentureCity" /></head><body><header class="site-header">
 
-  <div class="wrapper"><a class="site-title" rel="author" href="/">TheVentureCity</a><nav class="site-nav">
+  <div class="wrapper"><a class="site-title" rel="author" href="/"><img src="https://theventure.city/wp-content/uploads/2017/06/Theventurecity-logoweb-1.png" ></a><nav class="site-nav">
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
         <label for="nav-trigger">
           <span class="menu-icon">
@@ -28,30 +27,35 @@
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/about.html">About</a></div>
+        <div class="trigger"><a class="page-link" href="/about.html">About</a><a class="page-link" href="/gist1.html">gist1</a></div>
       </nav></div>
-</header>
-<main class="page-content" aria-label="Content">
+</header><main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <div class="home"><h1 class="page-heading">Data Analysis Toolkit for Early-Stage Startups</h1><h2 id="a-compilation-of-free-practical-tools-to-turn-raw-data-into-visual-insights"><strong>A compilation of free, practical tools to turn raw data into visual insights</strong></h2>
+        <div class="home"><h1 class="page-heading">Data Pipeline Toolkit for Early-Stage Startups</h1><h2 id="a-powerful-compilation-of-free-tools-and-custom-code-that-any-startup-can-adapt-to-turn-raw-data-into-visual-insights"><strong>A powerful compilation of free tools and custom code that any startup can adapt to turn raw data into visual insights</strong></h2>
 
-<p><em>Most of the world will make decisions by either guessing or using their gut. They will be either lucky or wrong</em> — Mixpanel founder Suhail Doshi</p>
+<p>There are lots of reasons why the data your startup is collecting is important: managing your team, impressing investors, delighting customers, planning for the future, etc. But which data? Where do you get it? How do you turn it from raw information into coherent story? And how can you do that on a tight budget? To answer those questions, <a href="https://theventure.city/">TheVentureCity</a> has developed this toolkit for startup founders who want to supplement their gut and intuition with data-driven insights.</p>
 
-<p><em>If you can’t measure it, you can’t improve it</em> — renowned management thinker Peter Drucker</p>
+<h2 id="make-your-own-copy--learn-by-doing">Make Your Own Copy &amp; Learn by Doing</h2>
 
-<h2 id="turn-data-into-insights">Turn Data into Insights</h2>
-
-<p>There are lots of reasons why the data your startup is collecting is important: managing your team, impressing investors, delighting customers, planning for the future, etc. But which data? Where do you get it? How do you turn it from raw information into coherent story? And how can you do that on a tight budget? To answer those questions, we have developed this toolkit for startup founders who want to supplement their gut and intuition with data-driven insights.</p>
+<p>The purpose of the toolkit is twofold:</p>
+<ol>
+  <li>To allow any startup to deploy an Extract-Transform-Load (ETL) pipeline that takes raw event log data as its input and feeds visual dashboards as its output. <strong>Our intent is that you will make your own copy of these tools and use them.</strong> If you need our help, just ask.</li>
+  <li>To supply context about what is happening behind the scenes by walking you through the code via Jupyter Python notebooks.</li>
+</ol>
 
 <p><img src="img/tvc_etl_pipeline_diagram.png" alt="TVC ETL Data Analysis Pipeline" style="width: 100%;" /></p>
 
-<h2 id="practical-tools">Practical Tools</h2>
+<p>The main engine orchesetrating the ETL pipeline is Python code. It is available in two forms:</p>
+<ul>
+  <li>Notebooks using <a href="https://colab.research.google.com/notebooks/welcome.ipynb">Google Colaboratory</a>’s cloud Jupyter runtime environment (see below for more notes); and</li>
+  <li>.py files in our GitHub repository</li>
+</ul>
 
-<p>To that end, <a href="https://theventure.city/">TheVentureCity</a> has released a series of Jupyter notebooks, each illustrating a specific type of analysis in the list below. By combining working Python code with a discussion of how it works and why it is important, we designed these notebooks to be practical tools that you can use right away or adapt for your business. In this way, you can learn on your own by analyzing of your startup’s data.</p>
+<p>Each notebook contains raw Python code and/or imports our .py files to illustrate a specific type of analysis as listed below. By combining working Python code with a discussion of how it works and why it is important, these notebooks help you learn on your own by analyzing your startup’s data. Once the data is extracted and transformed in memory (the “E” and “T” in “ETL”), the Python code loads it into Google Sheets (the “L” step). From there, Google Data Studio connects to Google Sheets to enable visualization and dissemination of the transformed data.</p>
 
-<p>Even if you do not have a dedicated data analyst at this time—and most of early-stage teams of 5-10 members do not have that role—make sure there is somebody on your engineering team who is tasked with instrumentation and analysis. It is this person who most needs to read this post. The Python code is fully commented and ready to run as-is in <a href="https://colab.research.google.com/notebooks/welcome.ipynb">Google Colaboratory</a>’s cloud Jupyter notebook environment. (See below for more notes.)</p>
+<p>Even if you do not have a dedicated data analyst at this time—and most of early-stage teams of 5-10 members do not have that role—make sure there is somebody on your engineering team who is tasked with instrumentation and analysis. It is this person who most needs to review this toolkit. The Python code is fully commented and ready to run as-is in the cloud notebook environment. When you have adapted it to your business and are ready to automate your pipeline, you’ll need to convert the notebooks to .py files scheduled to run at regular intervals.</p>
 
-<p>As this post is the introduction and table of contents for the toolkit, be sure to bookmark this page. We intend to continue building it out in the coming weeks and months.</p>
+<p>Be sure to bookmark this page so you can stay up-to-date as we continue to deploy new features.</p>
 
 <h2 id="analysis-menu">Analysis Menu</h2>
 
@@ -64,7 +68,7 @@
   <li><a href="https://jupyter.readthedocs.io/en/latest/content-quickstart.html">Jupyter Notebook Quickstart</a></li>
 </ul>
 
-<p><strong>1. Data Building Blocks</strong> — START HERE! Before you can start analyzing the data, you need to understand raw event log data and how to access it. Then the raw data needs some pre-processing to convert it into a “DAU Decorated” data set, which serves as the jumping-off point for the rest of the analysis.</p>
+<p><strong>1. Data Building Blocks</strong> — <em>START HERE!</em> Before you can start analyzing the data, you need to understand raw event log data and how to access it. Then the raw data needs some pre-processing to convert it into a “DAU Decorated” data set, which serves as the jumping-off point for the rest of the analysis.</p>
 
 <ul>
   <li>Part 1: Understanding Event Logs</li>
@@ -124,7 +128,6 @@
 
 <p>With the Google Colaboratory option there is no need to install any software. The other option is to install <a href="https://jupyter.org/">Jupyter</a> (Python 3.6) and the relevant libraries on your local machine. Whatever your comfort level with Python, we encourage you learn by doing: hit Shift-Enter to run each cell and see what happens. If you want some exposure to some Python basics to supplement this toolkit, we recommend <a href="https://www.datacamp.com/">DataCamp</a>, which has some excellent free courses, including a <a href="https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook">tutorial on Jupyter notebooks</a>. Where possible, we are including sample Excel spreadsheets; however, most of the time, Python is the superior tool because it can handle larger data sets more easily and perform loops.</p>
 </div>
-
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/"></data>

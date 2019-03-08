@@ -1,25 +1,27 @@
 ---
-title: Data Analysis Toolkit for Early-Stage Startups
+title: Data Pipeline Toolkit for Early-Stage Startups
 ---
-## **A compilation of free, practical tools to turn raw data into visual insights**
+## **A powerful compilation of free tools and custom code that any startup can adapt to turn raw data into visual insights**
 
-*Most of the world will make decisions by either guessing or using their gut. They will be either lucky or wrong* — Mixpanel founder Suhail Doshi
+There are lots of reasons why the data your startup is collecting is important: managing your team, impressing investors, delighting customers, planning for the future, etc. But which data? Where do you get it? How do you turn it from raw information into coherent story? And how can you do that on a tight budget? To answer those questions, [TheVentureCity](https://theventure.city/) has developed this toolkit for startup founders who want to supplement their gut and intuition with data-driven insights.
 
-*If you can't measure it, you can't improve it* — renowned management thinker Peter Drucker
+## Make Your Own Copy & Learn by Doing
 
-## Turn Data into Insights
-
-There are lots of reasons why the data your startup is collecting is important: managing your team, impressing investors, delighting customers, planning for the future, etc. But which data? Where do you get it? How do you turn it from raw information into coherent story? And how can you do that on a tight budget? To answer those questions, we have developed this toolkit for startup founders who want to supplement their gut and intuition with data-driven insights.
+The purpose of the toolkit is twofold: 
+1. To allow any startup to deploy an Extract-Transform-Load (ETL) pipeline that takes raw event log data as its input and feeds visual dashboards as its output. **Our intent is that you will make your own copy of these tools and use them.** If you need our help, just ask.
+1. To supply context about what is happening behind the scenes by walking you through the code via Jupyter Python notebooks.
 
 <img src="img/tvc_etl_pipeline_diagram.png" alt="TVC ETL Data Analysis Pipeline" style="width: 100%;"/>
 
-## Practical Tools
+The main engine orchesetrating the ETL pipeline is Python code. It is available in two forms: 
+* Notebooks using [Google Colaboratory](https://colab.research.google.com/notebooks/welcome.ipynb)'s cloud Jupyter runtime environment (see below for more notes); and 
+* .py files in our GitHub repository
 
-To that end, [TheVentureCity](https://theventure.city/) has released a series of Jupyter notebooks, each illustrating a specific type of analysis in the list below. By combining working Python code with a discussion of how it works and why it is important, we designed these notebooks to be practical tools that you can use right away or adapt for your business. In this way, you can learn on your own by analyzing of your startup's data. 
+Each notebook contains raw Python code and/or imports our .py files to illustrate a specific type of analysis as listed below. By combining working Python code with a discussion of how it works and why it is important, these notebooks help you learn on your own by analyzing your startup's data. Once the data is extracted and transformed in memory (the "E" and "T" in "ETL"), the Python code loads it into Google Sheets (the "L" step). From there, Google Data Studio connects to Google Sheets to enable visualization and dissemination of the transformed data.
 
-Even if you do not have a dedicated data analyst at this time—and most of early-stage teams of 5-10 members do not have that role—make sure there is somebody on your engineering team who is tasked with instrumentation and analysis. It is this person who most needs to read this post. The Python code is fully commented and ready to run as-is in [Google Colaboratory](https://colab.research.google.com/notebooks/welcome.ipynb)'s cloud Jupyter notebook environment. (See below for more notes.)
+Even if you do not have a dedicated data analyst at this time—and most of early-stage teams of 5-10 members do not have that role—make sure there is somebody on your engineering team who is tasked with instrumentation and analysis. It is this person who most needs to review this toolkit. The Python code is fully commented and ready to run as-is in the cloud notebook environment. When you have adapted it to your business and are ready to automate your pipeline, you'll need to convert the notebooks to .py files scheduled to run at regular intervals.
 
-As this post is the introduction and table of contents for the toolkit, be sure to bookmark this page. We intend to continue building it out in the coming weeks and months.
+Be sure to bookmark this page so you can stay up-to-date as we continue to deploy new features.
 
 ## Analysis Menu
 
@@ -30,7 +32,7 @@ Follow the links below to access the Jupyter notebook for that topic. Feel free 
 * [Google Colaboratory Basics](https://colab.research.google.com/notebooks/welcome.ipynb)
 * [Jupyter Notebook Quickstart](https://jupyter.readthedocs.io/en/latest/content-quickstart.html)
 
-**1. Data Building Blocks** — START HERE! Before you can start analyzing the data, you need to understand raw event log data and how to access it. Then the raw data needs some pre-processing to convert it into a “DAU Decorated” data set, which serves as the jumping-off point for the rest of the analysis. 
+**1. Data Building Blocks** — *START HERE!* Before you can start analyzing the data, you need to understand raw event log data and how to access it. Then the raw data needs some pre-processing to convert it into a “DAU Decorated” data set, which serves as the jumping-off point for the rest of the analysis. 
 
 * Part 1: Understanding Event Logs
 * Part 2: Create the “DAU Decorated” data set
